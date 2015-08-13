@@ -1,0 +1,59 @@
+html {
+  font-family: 'Roboto Mono';
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #f8fafb;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 1600px;
+  padding: 0 160px;
+  margin: 0 auto;
+
+  @media #{$normalScreen} {
+    padding: 0 80px;
+  }
+
+  @media #{$mobileScreen} {
+    padding: 0 30px;
+  }
+}
+
+.main {
+  min-height: 100%;
+  margin-bottom: -$bigFooterHeight;
+
+  &:after {
+    content: "";
+    display: block;
+    height: -$bigFooterHeight;
+  }
+
+  @media #{$normalScreen} {
+    margin-bottom: -$midFooterHeight;
+
+    &:after {
+      height: $midFooterHeight;
+    }
+  }
+
+  @media #{$mobileScreen} {
+    margin-bottom: -$mobFooterHeight;
+
+    &:after {
+      height: $mobFooterHeight;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}

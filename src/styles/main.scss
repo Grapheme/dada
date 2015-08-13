@@ -1,5 +1,8 @@
-// bower:scss
-@import "../../bower_components/normalize-scss/_normalize.scss";
-// endbower
+@import "common/vars";
+@import "common/fonts";
+@import "common/app";
 
-@import "fonts";
+@import "includes/header";
+@import "includes/footer";
+
+@import "pages/index";

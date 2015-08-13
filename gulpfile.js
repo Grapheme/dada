@@ -36,6 +36,7 @@ gulp.task('server', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
+  		project.paths.app + '/scripts/config.js',
  			project.paths.app + '/scripts/parts/**/*.js',
   		project.paths.app + '/scripts/main.js'])
     .pipe(concat('main.concat.js'))

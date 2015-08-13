@@ -1,5 +1,6 @@
 doctype html
 - var title = ''
+- var bodyClass = '';
 
 block vars 
     
@@ -11,8 +12,35 @@ html.no-js(lang="")
     title #{title}
     link(rel="stylesheet", href="styles/vendor.css")
     link(rel="stylesheet", href="styles/main.css")
-  body
-    block content
-    script(src="scripts/vendor.js")
-    script(src="scripts/main.concat.js")
-    block scripts
+    body(class="#{bodyClass}")
+        header.header
+            .wrapper
+                a(href="#").header__logo
+                nav.header__menu
+                    a(href="#").menu__link
+                        span Agency
+                    a(href="#").menu__link
+                        span Contacts
+                    a(href="#").menu__projects
+                        span Projects
+        main.main
+            block content
+        footer.footer
+            .wrapper
+                .relative
+                    .footer__copy Copyright © Dada Creative 2010-2015
+                    .footer__blocks
+                        .blocks__item
+                            .item__title Adress
+                            .item__text 2-ya Zvenigorodskaya str., 13/41, 6 floor<br>123022 Moscow, Russia
+                        .blocks__item
+                            .item__title Get in Touch
+                            .item__text Phone: + 7 (495) 374-88-14<br><a href="#">ask@dadacreative.com</a>
+                        .blocks__item
+                            .item__title Follow
+                            .item__text.
+                                <a href="#">Facebook</a><br>
+                                <a href="#">Instagram</a>
+        script(src="scripts/vendor.js")
+        script(src="scripts/main.concat.js")
+        block scripts
