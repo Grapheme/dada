@@ -14,8 +14,13 @@ function mouseVelocity(e_init, e) {
     return 0;
   }
   t = e.time;
-  new_x = e.clientX;
-  new_y = e.clientY;
+  if(e.clientX) {
+    new_x = e.clientX;
+    new_y = e.clientY;
+  } else {
+    new_x = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
+    nex_y = e.originalEvent.touches[0].pageY || e.originalEvent.changedTouches[0].pageY;
+  }
   new_t = Date.now();
   x_dist = new_x - x;
   y_dist = new_y - y;

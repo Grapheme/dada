@@ -50,10 +50,9 @@ Dada.MainSlider = {
     },
     setCss: function(elem, type, obj) {
       var template = obj ? obj : this.templates[type];
-      elem.attr('style', getTransformStr('translateX(' + template.translateX + '%)'));
-      /*elem.css({
+      elem.css({
         transform: 'translateX(' + template.translateX + '%)',
-      });*/
+      });
     },
     setActive: function(eq, animated) {
       var self = this;
@@ -108,7 +107,7 @@ Dada.MainSlider = {
         }
       };
       if(self.status) {
-        //e.preventDefault();
+        e.preventDefault();
         thisParent.nextActive = thisParent.activeIndex;
         var startPos = self.status.pageX;
         if(e.type == 'mousemove') {
