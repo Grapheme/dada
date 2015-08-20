@@ -1,0 +1,96 @@
+doctype html
+- var title = 'Dada'
+- var bodyClass = '';
+
+block vars 
+    
+html.no-js(lang="")
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+    title #{title}
+    link(rel="stylesheet", href="styles/vendor.css")
+    link(rel="stylesheet", href="styles/main.css")
+    body(class="#{bodyClass}")
+        .page-container.js-page-container
+            header.header
+                .wrapper
+                    a(href="/").header__logo
+                    nav.header__menu
+                        a(href="#").menu__link
+                            span Agency
+                        a(href="#").menu__link
+                            span Contacts
+                        a(href="#" data-popup="projects").menu__projects.js-show-popup
+                            span Projects
+            main.main
+                block content
+            footer.footer
+                .wrapper
+                    .relative
+                        .footer__copy Copyright © Dada Creative 2010-2015
+                        .footer__blocks
+                            .blocks__item
+                                .item__title Adress
+                                .item__text 2-ya Zvenigorodskaya str., 13/41, 6 floor<br>123022 Moscow, Russia
+                            .blocks__item
+                                .item__title Get in Touch
+                                .item__text Phone: + 7 (495) 374-88-14<br><a href="#">ask@dadacreative.com</a>
+                            .blocks__item
+                                .item__title Follow
+                                .item__text.
+                                    <a href="#">Facebook</a><br>
+                                    <a href="#">Instagram</a>
+        .page-changer.js-page-changer
+        .overlay.js-overlay
+            .overlay__background
+            .overlays
+                .js-popup.overlay__block.block-projects.wrapper(data-name="projects")
+                    .projects-wrapper
+                        .projects-inside
+                            .projects__top
+                                //- .top__langs
+                                    a(href="#").langs__item Ru
+                                    a(href="#").langs__item.active Eng
+                                a(href="#").top__close.js-close-popup
+                                    span.svg-font.icon-close
+                            .projects__bottom
+                                .bottom__left
+                                    .left__title Projects
+                                    .left__nav
+                                        a(href="#").nav__link.us-link.active All
+                                        a(href="#").nav__link.us-link Digital
+                                        a(href="#").nav__link.us-link Branding
+                                    .left__contact
+                                        a(href="#").us-btn
+                                            span Contact Us
+                                .bottom__right.js-customScroll
+                                    .right__block.block-left
+                                        each i in [1,2,3]
+                                            .block__item
+                                                .item__image
+                                                    img(src="https://placeimg.com/285/285/any")
+                                                .item__tag Digital
+                                                .item__name Yandex
+                                    .right__block.block-center
+                                        .block__upload
+                                            a(href="#").upload__link
+                                                span.svg-font.icon-download
+                                                span.link__text Download<br>Portfolio
+                                        each i in [1,2,3]
+                                            .block__item
+                                                .item__image
+                                                    img(src="https://placeimg.com/285/285/any")
+                                                .item__tag Digital
+                                                .item__name Yandex
+                                    .right__block.block-right
+                                        each i in [1,2,3]
+                                            .block__item
+                                                .item__image
+                                                    img(src="https://placeimg.com/285/285/any")
+                                                .item__tag Digital
+                                                .item__name Yandex
+        script(src="scripts/vendor.js")
+        script(src="scripts/main.concat.js")
+        block scripts

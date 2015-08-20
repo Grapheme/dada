@@ -1,0 +1,59 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'project-body'
+  - var title = 'Dada – project page'
+
+block content
+  .project
+    .project__header.white-font(style="background-image: url(images/tmp/index2.jpg);")
+      .header__content
+        .wrapper
+          .content-wrap
+            .project-title Yandex.Music
+            .project-desc We are truly passionate about advertising,<br>digital technologies, and branding.
+    .project-sections
+      section.project__block.block-text
+        .wrapper
+          .content-wrap
+            .block-desc
+              p To promote a revamped version of Yandex.Music, one of the mot popular media services by Russia’s top-1 and world’s top-5 search engine.
+      section.project__block.block-solution
+        .wrapper
+          .content-wrap
+            .block__left-text Solution
+            .block__left-image
+              .image__item.right-pos(style="background-image: url(images/tmp/index2.jpg);")
+            .block__right.left-pad
+              .right__image(style="background-image: url(images/tmp/index.jpg);")
+              .right__desc.block-desc We developed a slogan («Я рекомендую»), that got extended to all the media services of Yandex, and a key visual for Yandex.Music.
+      section.project__block.block-big-image
+        .wrapper
+          .content-wrap
+            img(src="images/tmp/index2.jpg" alt="").block__image
+      section.project__block.block-half-images
+        .wrapper
+          .content-wrap
+            .block__image
+              .image__item.right-pos(style="background-image: url(images/tmp/index2.jpg);")
+            .block__image
+              .image__item.left-pos(style="background-image: url(images/tmp/index.jpg);")
+      section.project__block.block-text-image
+        .wrapper
+          .content-wrap
+            .block__left.right-pad
+              .block-title Cross-branding
+              .block-desc The yellow cord runs through both sides of the print, connecting the key visual to an actual event in town that promotes ticket booking service by Yandex. This way we connected Yandex.Music to Yandex.Tickets effortlessly and within the big idea of the initial campaign.
+            .block__image
+              .image__item.left-pos(style="background-image: url(images/tmp/index.jpg);")
+    .project__footer
+      .wrapper
+        a(href="#").us-btn
+          span Contact Us
+        .footer__nav
+          a(href="#").nav__link
+            span.svg-font.icon-arrow_up
+          a(href="#").nav__link
+            span.svg-font.icon-arrow2_left
+          a(href="#").nav__link
+            span.svg-font.icon-arrow2_right

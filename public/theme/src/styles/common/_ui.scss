@@ -1,0 +1,85 @@
+.us-link {
+  opacity: .54;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  transition: all .3s ease;
+
+  &:hover {
+    border-color: transparent;
+    opacity: 1;
+  }
+
+  &.active {
+    color: $yellow;
+    opacity: 1;
+    border-color: transparent;
+    cursor: default;
+  }
+}
+
+.us-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 17px;
+  border: 2px solid $yellow;
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/ui/hover-triangle.png) 0 0 / 100% 100%;
+    transform: rotate(-25deg);
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transition: all .4s ease;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    &:before {
+      transform: rotate(0) translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+}
+
+.project-desc {
+  font-size: 17px;
+}
+
+@media #{$normalScreen} {
+  .project-title {
+    font-size: 60px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+  }
+}
+
+@media #{$mobileScreen} {
+  .project-title {
+    font-size: 34px;
+  }
+}
