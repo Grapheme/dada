@@ -70,6 +70,19 @@ return array(
                 ),
             ];
 
+        $settings['content'] = [
+            'title' => 'Контент',
+            'options' => array(
+                'portfolio_link' => array(
+                    'title' => 'Ссылка на портфолио (PDF)',
+                    'type' => 'text',
+                    'others' => [
+                        'placeholder' => 'http://',
+                    ],
+                ),
+            ),
+        ];
+
         return $settings;
     },
 

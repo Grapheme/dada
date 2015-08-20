@@ -31,29 +31,59 @@ return array(
 
         $block_tpls = [
 
-            'first' => [
-                'title' => 'Первый тип блока',
+            'project_solution' => [
+                'title' => 'Проект - Решение',
                 'fields' => [
-                    'text' => [
-                        'title' => 'Заголовок',
+                    'title' => [
+                        'title' => 'Заголовок (Решение, Solution)',
                         'type' => 'text',
                     ],
-                    'image' => [
+                    'image_big' => [
+                        'title' => 'Картинка большая',
+                        'type' => 'image',
+                    ],
+                    'image_small' => [
+                        'title' => 'Картинка маленькая',
+                        'type' => 'image',
+                    ],
+                    'text' => [
+                        'title' => 'Текст',
+                        'type' => 'textarea_redactor',
+                    ],
+                ],
+            ],
+            'project_one_image' => [
+                'title' => 'Проект - одна картинка',
+                'fields' => [
+                    'image_1' => [
                         'title' => 'Картинка',
                         'type' => 'image',
                     ],
                 ],
             ],
-            'second' => [
-                'title' => 'Второй тип блока',
+            'project_two_images' => [
+                'title' => 'Проект - две картинки',
+                'fields' => [
+                    'image_1' => [
+                        'title' => 'Картинка 1',
+                        'type' => 'image',
+                    ],
+                    'image_2' => [
+                        'title' => 'Картинка 2',
+                        'type' => 'image',
+                    ],
+                ],
+            ],
+            'project_image_text' => [
+                'title' => 'Проект - текст + картинка',
                 'fields' => [
                     'text' => [
-                        'title' => 'Заголовок',
-                        'type' => 'text',
-                    ],
-                    'content' => [
                         'title' => 'Текст',
-                        'type' => 'textarea',
+                        'type' => 'textarea_redactor',
+                    ],
+                    'image' => [
+                        'title' => 'Картинка',
+                        'type' => 'image',
                     ],
                 ],
             ],
