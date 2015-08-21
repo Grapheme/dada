@@ -1401,3 +1401,12 @@ if (!function_exists('is_json')) {
         return (json_last_error() == JSON_ERROR_NONE) ? $temp : false;
     }
 }
+
+if (!function_exists('count_')) {
+    function count_($obj) {
+        return (
+            (is_object($obj) && method_exists($obj, 'count') && $obj->count())
+            || (is_array($obj) && count($obj))
+        );
+    }
+}

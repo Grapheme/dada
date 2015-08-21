@@ -4,11 +4,39 @@ class ApplicationController extends BaseController {
 
     public static $name = 'application';
     public static $group = 'application';
+    public static $global_cache_min = 10;
 
     /****************************************************************************/
 
     ## Routing rules of module
     public static function returnRoutes($prefix = null) {
+
+        $dics_for_cache = ['projects', 'types'];
+        foreach ($dics_for_cache as $dic_name) {
+
+            ## Refresh dics cache
+            #Cache::forget('dic_' . $dic_name);
+
+            $dic_{$dic_name} = Cache::get('dic_' . $dic_name);
+            if (!$dic_{$dic_name}) {
+
+                Cache::forget('dic_' . $dic_name);
+
+                $dic_{$dic_name} = Dic::valuesBySlug($dic_name, null, ['allfields', 'alltextfields'], true, true, true);
+                #Helper::d($dic_name); Helper::ta($dic_{$dic_name}); #die;
+
+                $dic_{$dic_name} = DicLib::loadImages($dic_{$dic_name}, ['avatar', 'image', 'logo', 'photo', 'header_img']);
+                #Helper::d($dic_name); Helper::ta($dic_{$dic_name}); #die;
+
+                Cache::add('dic_' . $dic_name, $dic_{$dic_name}, self::$global_cache_min);
+            }
+            View::share('dic_' . $dic_name, $dic_{$dic_name});
+
+            #Helper::d($dic_name); Helper::ta($dic_{$dic_name});
+        }
+        #Helper::tad($dic_{'city'});
+        #die;
+
 
         Route::group(array(), function() {
 

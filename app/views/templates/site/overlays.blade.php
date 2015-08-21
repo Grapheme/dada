@@ -17,8 +17,11 @@
                             <div class="left__title">Projects</div>
                             <div class="left__nav">
                                 <a href="#" class="nav__link us-link active">All</a>
-                                <a href="#" class="nav__link us-link">Digital</a>
-                                <a href="#" class="nav__link us-link">Branding</a>
+                                @if (count_($dic_types))
+                                    @foreach ($dic_types as $type)
+                                        <a href="#" class="nav__link us-link">{{ $type->field('type_name') }}</a>
+                                    @endforeach
+                                @endif
                             </div>
                             <div class="left__contact">
                                 <a href="#" class="us-btn"><span>Contact Us</span></a>
@@ -29,6 +32,16 @@
                             <div class="block__upload">
                                 <a href="#" class="upload__link"><span class="svg-font icon-download"></span><span class="link__text">Download<br>Portfolio</span></a>
                             </div>
+
+                            @if (count_($dic_projects))
+                                @foreach ($dic_projects as $project)
+                                    <div class="block__item">
+                                        <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
+                                        <div class="item__tag">Digital</div>
+                                        <div class="item__name">{{ $project->field('project_name') }}</div>
+                                    </div>
+                                @endforeach
+                            @endif
 
                             <div class="block__item">
                                 <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
