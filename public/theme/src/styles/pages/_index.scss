@@ -1,0 +1,117 @@
+.index {
+  position: absolute;
+  top: $bigHeaderHeight;
+  left: 0;
+  right: 0;
+  bottom: $bigFooterHeight;
+
+  .wrapper {
+    height: 100%;
+  }
+
+  .index-wrap {
+    position: relative;
+    height: 100%;
+  }
+
+  .index__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a3a4a2;
+    background-size: cover;
+    background-position: center center;
+    white-space: nowrap;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+    }
+
+    &.animated {
+      transition: all .5s ease;
+    }
+
+    &.active {
+      box-shadow: 19px 33px 70px 6px rgba(50, 50, 50, .3);
+    }
+
+    &.opened {
+      overflow: hidden;
+
+      .project-title {
+        transition: all .7s cubic-bezier(0.51,-0.16, 0.91,-0.11);
+        transform: translateX(-200%);
+      }
+
+      .project-desc {
+        transition: all .7s cubic-bezier(0.51,-0.16, 0.91,-0.11) .1s;
+        transform: translateX(-200%);
+      }
+    }
+
+    .slide__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .slide__content {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 3%;
+      padding-left: 140px;
+      color: #fff;
+      white-space: normal;
+    }
+  }
+
+  @media #{$normalScreen} {
+    top: $midHeaderHeight;
+    bottom: $midFooterHeight;
+
+    .index__slide {
+      .slide__content {
+        padding-left: 95px;
+      }
+    }
+  }
+
+  @media #{$mobileScreen} {
+    top: $mobHeaderHeight;
+    bottom: $mobFooterHeight;
+
+    .index__slide {
+      .slide__content {
+        padding: 25px 10px;
+        box-sizing: border-box;
+        width: 100%;
+        vertical-align: bottom;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.index-sample {
+  position: absolute;
+  z-index: 97;
+  background: {
+    size: cover;
+    position: center center;
+  }
+  transition: all 1s ease;
+}
+
+.index-body .main {
+  position: relative;
+  overflow: hidden;
+}
