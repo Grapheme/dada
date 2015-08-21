@@ -61,7 +61,9 @@ gulp.task('vendor', function () {
 
 gulp.task('jade', function() {
 	gulp.src(project.paths.app + '/views/*.jade')
-		.pipe(jade())
+		.pipe(jade({
+      pretty: true
+    }))
 		.pipe(gulp.dest(project.paths.build))
 		.pipe(connect.reload());
 });
