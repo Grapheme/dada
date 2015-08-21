@@ -6,8 +6,14 @@ return array(
 
         $pages = Page::all_by_id();
         $pages_list = [];
-        if (isset($pages) && is_object($pages) && $pages->count())
-            $pages_list = $pages->lists('name', 'id');
+        if (isset($pages) && is_object($pages) && $pages->count()) {
+
+            #$pages_list = $pages->lists('name', 'id');
+            foreach ($pages as $page) {
+                if ($page->type_id == 1)
+                    $pages_list[$page->id] = $page->name;
+            }
+        }
 
         /**
          * Предзагружаем нужные словари с данными, по системному имени словаря, для дальнейшего использования.
