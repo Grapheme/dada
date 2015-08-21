@@ -17,16 +17,23 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        @include(Helper::layout('header'))
+        <div class="page-container js-page-container">
 
-        @section('content')
-            {{ @$content }}
-        @show
+            @include(Helper::layout('header'))
 
-        @section('footer')
-            {{-- @file_get_contents(Helper::inclayout('footer')) --}}
-            @include(Helper::layout('footer'))
-        @show
+            @section('content')
+                {{ @$content }}
+            @show
+
+            @section('footer')
+                {{-- @file_get_contents(Helper::inclayout('footer')) --}}
+                @include(Helper::layout('footer'))
+            @show
+
+        </div>
+        <div class="page-changer js-page-changer"></div>
+
+        @include(Helper::layout('overlays'))
 
         @include(Helper::layout('scripts'))
 
