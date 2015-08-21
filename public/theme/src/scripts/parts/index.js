@@ -110,7 +110,7 @@ MainSlider.prototype = {
           localShift(thisParent.activeFrame.next().next(), 'nextAll', (100-thisX/2), 1);
         }
       };
-      if(self.status) {
+      if(self.status && !thisParent.dom.parent.hasClass('disabled')) {
         e.preventDefault();
         thisParent.nextActive = thisParent.activeIndex;
         var startPos = self.status.pageX;

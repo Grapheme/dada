@@ -41,6 +41,20 @@
       box-shadow: 19px 33px 70px 6px rgba(50, 50, 50, .3);
     }
 
+    &.opened {
+      overflow: hidden;
+
+      .project-title {
+        transition: all .7s cubic-bezier(0.51,-0.16, 0.91,-0.11);
+        transform: translateX(-200%);
+      }
+
+      .project-desc {
+        transition: all .7s cubic-bezier(0.51,-0.16, 0.91,-0.11) .1s;
+        transform: translateX(-200%);
+      }
+    }
+
     .slide__link {
       position: absolute;
       top: 0;
@@ -85,6 +99,16 @@
       }
     }
   }
+}
+
+.index-sample {
+  position: absolute;
+  z-index: 97;
+  background: {
+    size: cover;
+    position: center center;
+  }
+  transition: all 1s ease;
 }
 
 .index-body .main {
