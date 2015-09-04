@@ -22,7 +22,7 @@ class ApplicationController extends BaseController {
 
                 Cache::forget('dic_' . $dic_name);
 
-                $dic_{$dic_name} = Dic::valuesBySlug($dic_name, null, ['allfields', 'alltextfields'], true, true, true);
+                $dic_{$dic_name} = Dic::valuesBySlug($dic_name, function($query){ $query->orderBy('lft', 'ASC'); }, ['allfields', 'alltextfields'], true, true, true);
                 #Helper::d($dic_name); Helper::ta($dic_{$dic_name}); #die;
 
                 $dic_{$dic_name} = DicLib::loadImages($dic_{$dic_name}, ['avatar', 'image', 'logo', 'photo', 'header_img']);
@@ -38,10 +38,19 @@ class ApplicationController extends BaseController {
         #die;
 
 
+        Route::group(array('prefix' => '{lang}'), function() {
+
+            Route::any('/project/{slug}', array('as' => 'app.project', 'uses' => __CLASS__.'@appProject'));
+
+            #Route::any('/ajax/send-message', array('as' => 'ajax.send-message', 'uses' => __CLASS__.'@postSendMessage'));
+            #Route::any('/ajax/some-action', array('as' => 'ajax.some-action', 'uses' => __CLASS__.'@postSomeAction'));
+        });
+
+
         Route::group(array(), function() {
 
-            Route::any('/ajax/send-message', array('as' => 'ajax.send-message', 'uses' => __CLASS__.'@postSendMessage'));
-            Route::any('/ajax/some-action', array('as' => 'ajax.some-action', 'uses' => __CLASS__.'@postSomeAction'));
+            #Route::any('/ajax/send-message', array('as' => 'ajax.send-message', 'uses' => __CLASS__.'@postSendMessage'));
+            #Route::any('/ajax/some-action', array('as' => 'ajax.some-action', 'uses' => __CLASS__.'@postSomeAction'));
         });
     }
 
@@ -52,6 +61,43 @@ class ApplicationController extends BaseController {
 	public function __construct(){
         #
 	}
+
+
+    public function appProject($lang, $slug) {
+
+        $project = Dic::valueBySlugs('projects', $slug, ['fields', 'textfields']);
+        #Helper::tad($project);
+
+        if (!$project)
+            App::abort(404);
+
+        $project = DicLib::loadImages($project, ['image']);
+
+        $project_page = Page::by_id($project->page_id);
+        #Helper::tad($project_page);
+
+        if (!$project_page)
+            App::abort(404);
+
+        $prev_project = null;
+        $next_project = null;
+
+        $prev_project = Dic::valuesBySlug('projects', function($query) use ($project) {
+            $query->where('lft', '<', $project->lft);
+            $query->orderBy('lft', 'ASC');
+            $query->take(1);
+        }, ['fields', 'textfields'], true, true, true);
+        #Helper::ta($prev_project);
+
+        $next_project = Dic::valuesBySlug('projects', function($query) use ($project) {
+            $query->where('lft', '>', $project->lft);
+            $query->orderBy('lft', 'ASC');
+            $query->take(1);
+        }, ['fields', 'textfields'], true, true, true);
+        #Helper::tad($next_project);
+
+        return View::make(Helper::layout('project'), compact('project', 'project_page', 'prev_project', 'next_project'));
+    }
 
 
     public function postSendMessage() {
@@ -116,10 +162,5 @@ class ApplicationController extends BaseController {
         return Response::json($json_request, 200);
     }
 
-
-    public function postSomeAction() {
-
-        #
-    }
 
 }

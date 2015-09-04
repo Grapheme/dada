@@ -14,9 +14,9 @@
                     </div>
                     <div class="projects__bottom">
                         <div class="bottom__left">
-                            <div class="left__title">Projects</div>
+                            <div class="left__title">{{ trans("interface.menu_projects") }}</div>
                             <div class="left__nav">
-                                <a href="#" class="nav__link us-link active">All</a>
+                                <a href="#" class="nav__link us-link active">{{ trans("interface.filter_all") }}</a>
                                 @if (count_($dic_types))
                                     @foreach ($dic_types as $type)
                                         <a href="#" class="nav__link us-link">{{ $type->field('type_name') }}</a>
@@ -24,76 +24,28 @@
                                 @endif
                             </div>
                             <div class="left__contact">
-                                <a href="#" class="us-btn"><span>Contact Us</span></a>
+                                <a href="#" class="us-btn"><span>{{ trans("interface.button_contact_us") }}</span></a>
                             </div>
                         </div>
                         <div class="bottom__right js-customScroll">
 
                             <div class="block__upload">
-                                <a href="#" class="upload__link"><span class="svg-font icon-download"></span><span class="link__text">Download<br>Portfolio</span></a>
+                                <a href="#" class="upload__link"><span class="svg-font icon-download"></span><span class="link__text">{{ trans("interface.button_download_portfolio") }}</span></a>
                             </div>
 
-                            @if (count_($dic_projects))
-                                @foreach ($dic_projects as $project)
-                                    <div class="block__item">
-                                        <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                        <div class="item__tag">Digital</div>
-                                        <div class="item__name">{{ $project->field('project_name') }}</div>
-                                    </div>
-                                @endforeach
-                            @endif
+                            {{--
+                            <div class="block__item">
+                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
+                                <div class="item__tag">Digital</div>
+                                <div class="item__name">Yandex</div>
+                            </div>
+                            --}}
 
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            <div class="block__item">
-                                <div class="item__image"><img src="https://placeimg.com/285/285/any"></div>
-                                <div class="item__tag">Digital</div>
-                                <div class="item__name">Yandex</div>
-                            </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>

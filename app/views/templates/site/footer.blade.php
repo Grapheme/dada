@@ -10,21 +10,21 @@
             <div class="footer__copy">Copyright © Dada Creative 2010-{{ date('Y') }}</div>
             <div class="footer__blocks">
                 <div class="blocks__item">
-                    <div class="item__title">Address</div>
-                    <div class="item__text">2-ya Zvenigorodskaya str., 13/41, 6 floor<br>123022 Moscow, Russia</div>
-                </div>
-                <div class="blocks__item">
-                    <div class="item__title">Get in Touch</div>
-                    <div class="item__text">Phone: + 7 (495) 374-88-14<br>
-                        <a href="#">ask@dadacreative.com</a>
+                    <div class="item__title">{{ trans("interface.footer_col_1_title") }}</div>
+                    <div class="item__text">
+                        {{ trans("interface.footer_col_1_content") }}
                     </div>
                 </div>
                 <div class="blocks__item">
-                    <div class="item__title">Follow</div>
+                    <div class="item__title">{{ trans("interface.footer_col_2_title") }}</div>
                     <div class="item__text">
-                        <a href="#">Facebook</a>
-                        <br>
-                        <a href="#">Instagram</a>
+                        {{ trans("interface.footer_col_2_content") }}
+                    </div>
+                </div>
+                <div class="blocks__item">
+                    <div class="item__title">{{ trans("interface.footer_col_3_title") }}</div>
+                    <div class="item__text">
+                        {{ trans("interface.footer_col_3_content") }}
                     </div>
                 </div>
             </div>

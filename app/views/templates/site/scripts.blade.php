@@ -25,8 +25,10 @@ foreach ($dic_projects as $project) {
     $projects[$project->id] = [
         'name' => $project->field('project_name'),
         'type_id' => $project->project_type_id,
-        'url' => URL::route('page', $page->slug),
-        'image' => is_object($image) ? $image->full() : null,
+        #'url' => URL::route('page', $page->slug),
+        'url' => URL::route('app.project', $project->slug),
+        'full' => is_object($image) ? $image->full() : null,
+        'thumb' => is_object($image) ? $image->thumb() : null,
     ];
 }
 ?>

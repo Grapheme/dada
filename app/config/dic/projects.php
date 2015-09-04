@@ -72,7 +72,6 @@ return array(
     },
 
 
-
     /**
      * HOOKS - набор функций-замыканий, которые вызываются в некоторых местах кода модуля словарей, для выполнения нужных действий.
      */
@@ -86,7 +85,6 @@ return array(
             Cache::forget('dic_' . $dic->slug);
         },
     ),
-
 
 
     'second_line_modifier' => function($line, $dic, $dicval) {
