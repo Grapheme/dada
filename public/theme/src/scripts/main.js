@@ -8,6 +8,8 @@ PageInit.prototype = {
     new MainSlider();
     new Overlay();
     new Pages();
+    new Contacts();
+    new Input();
     $(window).on('load', function(){
       $('.js-customScroll').mCustomScrollbar({
         theme:"rounded",

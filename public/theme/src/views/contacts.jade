@@ -1,0 +1,33 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'contact-body'
+  - var title = 'Dada – contacts page'
+
+block content
+  .contacts.in-wrapper
+    .wrapper
+      .contacts__block
+        .block__left
+          .left__content
+            .content__title Contacts
+            .content__desc If you have any questions, do not hesitate to contact us or to come over to our cozy office for a little chat. We enjoy good company!
+        .block__right
+          .right__map#map
+      .contacts__form
+        .form__title Contact us for work.<br>We’d love to hear from u!
+        .form__lines
+          .lines__item
+            .item__input.input-half.js-input
+              .input__placeholder.js-placeholder Your name
+              input(type="text")
+            .item__input.input-half.js-input
+              .input__placeholder.js-placeholder Your e-mail
+              input(type="text")
+          .lines__item
+            .item__input.js-input
+              .input__placeholder.js-placeholder What can we do for you?
+              input(type="text")
+          .lines__btn
+            a(href="#").us-btn
+              span Send

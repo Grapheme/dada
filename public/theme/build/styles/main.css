@@ -95,6 +95,15 @@ html, body {
       .main:after {
         height: 50px; } }
 
+.in-wrapper {
+  padding: 180px 0 200px; }
+  @media (max-width: 1650px) {
+    .in-wrapper {
+      padding: 120px 0 105px; } }
+  @media (max-width: 768px) {
+    .in-wrapper {
+      padding: 75px 0 50px; } }
+
 .page-container {
   position: absolute;
   top: 0;
@@ -780,3 +789,104 @@ html, body {
     padding: 35px 0 85px; }
     .project .project__footer .footer__nav .nav__link {
       width: 65px; } }
+
+.contacts .contacts__block {
+  height: 700px;
+  line-height: 700px;
+  background: #f8bb62;
+  box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.25); }
+  .contacts .contacts__block .block__left {
+    float: left;
+    width: 50%; }
+    .contacts .contacts__block .block__left .left__content {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      width: 380px;
+      padding-left: 140px; }
+      .contacts .contacts__block .block__left .left__content .content__title {
+        font-family: 'Playfair Display', serif;
+        font-size: 40px; }
+      .contacts .contacts__block .block__left .left__content .content__desc {
+        font-size: 14px;
+        margin-top: 10px; }
+  .contacts .contacts__block .block__right {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+    line-height: normal; }
+    .contacts .contacts__block .block__right .right__map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+
+.contacts .contacts__form {
+  margin-top: 290px;
+  padding: 0 135px; }
+  .contacts .contacts__form .form__title {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #413f44;
+    line-height: 1.2; }
+  .contacts .contacts__form .form__lines {
+    margin-top: 50px; }
+    .contacts .contacts__form .form__lines .lines__item {
+      margin-top: 35px;
+      overflow: hidden; }
+      .contacts .contacts__form .form__lines .lines__item:first-child {
+        margin-top: 0; }
+      .contacts .contacts__form .form__lines .lines__item .item__input {
+        position: relative;
+        padding-top: 30px;
+        height: 45px; }
+        .contacts .contacts__form .form__lines .lines__item .item__input.input-half {
+          float: left;
+          width: 48%; }
+          .contacts .contacts__form .form__lines .lines__item .item__input.input-half:first-child {
+            margin-right: 2%; }
+          .contacts .contacts__form .form__lines .lines__item .item__input.input-half:last-child {
+            margin-left: 2%; }
+        .contacts .contacts__form .form__lines .lines__item .item__input.active .input__placeholder {
+          -webkit-transform: translateY(-90%);
+              -ms-transform: translateY(-90%);
+                  transform: translateY(-90%);
+          font-size: 20px; }
+        .contacts .contacts__form .form__lines .lines__item .item__input .input__placeholder {
+          position: absolute;
+          bottom: 0;
+          height: 45px;
+          line-height: 45px;
+          font-size: 30px;
+          color: rgba(65, 63, 68, 0.302);
+          -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease; }
+        .contacts .contacts__form .form__lines .lines__item .item__input input {
+          position: absolute;
+          left: 0;
+          top: 30px;
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid #59575c;
+          outline: none;
+          width: 100%;
+          height: 40px;
+          font-size: 30px;
+          font-family: 'Roboto Mono';
+          color: #413f44; }
+          .contacts .contacts__form .form__lines .lines__item .item__input input:focus {
+            border-bottom: 3px solid #f8bb62; }
+    .contacts .contacts__form .form__lines .lines__btn {
+      margin-top: 45px;
+      text-align: right; }
+      .contacts .contacts__form .form__lines .lines__btn .us-btn {
+        padding: 0 40px; }
+
+@media (max-width: 1650px) {
+  .contacts .contacts__block {
+    height: 530px;
+    line-height: 530px; }
+  .contacts .contacts__form {
+    padding: 0 95px; } }

@@ -58,6 +58,18 @@ html, body {
   }
 }
 
+.in-wrapper {
+  padding: $bigHeaderHeight 0 $bigFooterHeight;
+
+  @media #{$normalScreen} {
+    padding: $midHeaderHeight 0 $midFooterHeight;
+  }
+
+  @media #{$mobileScreen} {
+    padding: $mobHeaderHeight 0 $mobFooterHeight;
+  }
+}
+
 .page-container {
   position: absolute;
   top: 0;
