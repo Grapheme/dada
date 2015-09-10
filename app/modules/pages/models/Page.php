@@ -412,6 +412,16 @@ class Page extends BaseModel {
         return @$this->page_meta_settings['fields'][$name] ?: null;
     }
 
+
+    public function url($params = []) {
+
+        #Helper::tad($this);
+
+        $route_name = 'page' . ($this->parametrized ? '.' . $this->sysname : '');
+        $temp = (array)($this->slug) + $params;
+
+        return URL::route($route_name, $temp);
+    }
 }
 
 if (!function_exists('pageslug')) {
