@@ -18,7 +18,7 @@ html.no-js(lang="")
                 .wrapper
                     a(href="/").header__logo
                     nav.header__menu
-                        a(href="#").menu__link
+                        a(href="agency.html").menu__link
                             span Agency
                         a(href="contacts.html").menu__link
                             span Contacts
@@ -94,4 +94,15 @@ html.no-js(lang="")
         script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&sensor=true")
         script(src="scripts/vendor.js")
         script(src="scripts/main.concat.js")
+        script.
+            WebFontConfig = { fontdeck: { id: '59727' } };
+            (function() {
+              var wf = document.createElement('script');
+              wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+              wf.type = 'text/javascript';
+              wf.async = 'true';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(wf, s);
+            })();
         block scripts

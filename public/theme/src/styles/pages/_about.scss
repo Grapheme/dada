@@ -1,0 +1,313 @@
+.about {
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 1.429;
+  }
+
+  .about__header {
+    position: relative;
+    height: 685px;
+
+    .wrapper {
+      height: 100%;
+    }
+
+    .header__image {
+      position: absolute;
+      left: 0;
+      right: 46%;
+      height: 100%;
+      background: {
+        size: cover;
+        position: center center;
+        color: #ccc;
+      }
+
+      .image__word {
+        position: absolute;
+        display: inline-block;
+        right: -100px;
+        top: 50%;
+        transform-origin: 100% 100%;
+        transform: rotate(-90deg) translateX(50%);
+        font-family: 'Playfair Display', serif;
+        font-size: 40px;
+      }
+    }
+
+    .header__info {
+      position: relative;
+      float: right;
+      width: 44%;
+      height: 100%;
+
+      .info-cont {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .info__top {
+        position: relative;
+        text-align: right;
+
+        .top__image {
+          display: inline-block;
+          vertical-align: top;
+          width: 230px;
+          height: 230px;
+          background: {
+            size: cover;
+            position: center center;
+            color: #ccc;
+          }
+        }
+
+        .top__word {
+          position: absolute;
+          display: inline-block;
+          left: 17%;
+          bottom: 0;
+          transform-origin: 0 100%;
+          transform: rotate(-90deg);
+          font-family: 'Playfair Display', serif;
+          font-size: 40px;
+        }
+      }
+
+      .info__text {
+        width: 350px;
+        margin: 60px auto 0;
+
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .info__btn {
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+      }
+    }
+  }
+
+  .about__clients {
+    position: relative;
+    height: 525px;
+    margin-top: 120px;
+
+    .wrapper {
+      height: 100%;
+    }
+
+    .clients__left {
+      padding-top: 110px;
+      width: 50%;
+
+      .left__links {
+        margin-top: 70px;
+        padding-left: 20px;
+
+        .links__item {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 60px 30px 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .clients__right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      background: {
+        size: cover;
+        position: center center;
+        color: #ccc;
+      }
+    }
+  }
+
+  .about__middle {
+    margin-top: 70px;
+
+    .middle__left {
+      float: left;
+      width: 50%;
+      padding-top: 70px;
+
+      .left__block {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        margin: 0 -.3em 35px 0;
+        box-sizing: border-box;
+        padding-right: 55px;
+
+        .block__desc {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .middle__founders {
+      float: left;
+      width: 50%;
+      overflow: hidden;
+
+      .founders__list {
+        margin: 20px -20px 0;
+
+        .list__item {
+          float: left;
+          width: 50%;
+          box-sizing: border-box;
+          padding: 0 20px;
+
+          .item__image {
+            height: 370px;
+            background: {
+              size: cover;
+              position: center center;
+              color: #ccc;
+            }
+          }
+
+          .item__name {
+            margin-top: 20px;
+          }
+
+          .item__desc {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .about__team {
+    margin-top: 100px;
+
+    .team__image {
+      margin-top: 20px;
+      height: 720px;
+      background: {
+        size: cover;
+        position: center center;
+        color: #ccc;
+      }
+    }
+  }
+
+  .about__footer {
+    position: relative;
+    text-align: right;
+    padding: 70px 0 70px;
+    margin-right: 130px;
+
+    .footer__nav {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+
+      .nav__link {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        font-size: 23px;
+        color: #727373;
+        width: 100px;
+        text-align: center;
+        transition: all .3s;
+
+        &:hover {
+          opacity: .54;
+        }
+      }
+    }
+  }
+
+  @media #{$normalScreen} {
+    .about__header {
+      position: relative;
+      height: auto;
+
+      .header__image {
+        height: 500px;
+      }
+
+      .header__info {
+        width: 65%;
+
+        .info-cont {
+          position: relative;
+          margin-top: 500px;
+        }
+
+        .info-content {
+          position: relative;
+          width: 500px;
+        }
+
+        .info__top {
+          position: absolute;
+          right: 0;
+
+          .top__image {
+            width: 150px;
+            height: 150px;
+          }
+        }
+
+        .info__text {
+          padding-top: 50px;
+          margin: 0;
+        }
+      }
+    }
+
+    .about__clients {
+      height: 450px;
+
+      .clients__left {
+        padding-top: 0;
+      }
+    }
+
+    .about__middle {
+      .middle__left {
+        width: 65%;
+      }
+
+      .middle__founders {
+        float: right;
+        width: 65%;
+        margin-top: 40px;
+      }
+    }
+
+    .about__team {
+      .team__image {
+        height: 500px;
+      }
+    }
+  }
+
+  @media #{$mobileScreen} {
+    padding: 0 30px;
+  }
+}

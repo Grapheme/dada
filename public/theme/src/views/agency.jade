@@ -1,0 +1,76 @@
+extends templates/layout
+
+block vars
+  - var bodyClass = 'agency-body'
+  - var title = 'Dada – agency page'
+
+block content
+  .about.in-wrapper.top-less
+    .about__header
+      .wrapper
+        .header__image(style="background-image: url(http://lorempixel.com/700/700/abstract);")
+          .image__word.screenNormal Agency
+        .header__info
+          .info-cont
+            .info__top
+              .top__image(style="background-image: url(http://lorempixel.com/300/300/abstract);")
+              .top__word.screenWide Agency
+            .info-content
+              .info__text.about-text
+                p We used to be a part of most successful ad agencies nationwide before we decided to step it up and create our own agency.
+                p We are truly passionate about advertising,digital technologies,and branding. 
+                p Our goal is to achieve maximum efficiency and perfect integrity within every project we carry out.
+              .info__btn
+                a(href="#").us-btn
+                  span Contact Us
+        .clearfix
+    .about__clients
+      .wrapper
+        .clients__left
+          .about-title Clients
+          .left__links
+            a(href="#").links__item
+              img(src="images/about/yandex.png")
+            a(href="#").links__item
+              img(src="images/about/rostelek.png")
+            a(href="#").links__item
+              img(src="images/about/sts.png")
+            a(href="#").links__item
+              img(src="images/about/nivea.png")
+        .clients__right(style="background-image: url(http://lorempixel.com/701/700/abstract);")
+    .about__middle
+      .wrapper
+        .middle__left
+          .left__block
+            .about-title Human centered
+            .block__desc.about-text Understanding an audience is central to establishing how best to communicate with them. By focusing firmly on a human-centred approach to strategy and creation we build lasting brands that connect with people and stand the test of time.
+          .left__block
+            .about-title With business context
+            .block__desc.about-text We work closely with clients to gain an in-depth understanding of their proposition and wider market landscape. We deploy means of deriving the business context and help clients to arrive at the solution that best fits their organisation.
+          .left__block
+            .about-title With trusted partners
+            .block__desc.about-text We find great ideas at the intersection between strategy, technology and design. We work openly and collaboratively with a network of expert individuals including writers, photographers, animators, filmmakers and creative technologists.
+        .middle__founders
+          .about-title The Founders
+          .founders__list
+            .list__item
+              .item__image(style="background-image: url(http://lorempixel.com/400/400/abstract);")
+              .item__name Danil Petrov / CEO
+              .item__desc.about-text Worked as account manager at BBDO Moscow, and as digital szpecialist at Danone.
+            .list__item
+              .item__image(style="background-image: url(http://lorempixel.com/401/400/abstract);")
+              .item__name Artem Petrov / Creative Director
+              .item__desc.about-text Worked as art director at Saatchi&Saatchi Kyiv, BBDO Moscow, and Firma Agency.
+          .clearfix
+        .clearfix
+    .about__team
+      .wrapper
+        .about-title The Team
+        .team__image(style="background-image: url(http://lorempixel.com/1280/700/abstract);")
+    .about__footer
+      .wrapper
+        a(href="#").us-btn
+          span Contact Us
+        .footer__nav
+          a(href="#").nav__link.js-scroll-top
+            span.svg-font.icon-arrow_up

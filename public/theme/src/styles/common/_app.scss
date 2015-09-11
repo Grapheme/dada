@@ -1,5 +1,6 @@
 html {
-  font-family: 'Roboto Mono';
+  // font-family: 'Roboto Mono';
+  font-family:"Basis Grotesque Pro Regular", 'Helvetica Neue', Arial, Droid, sans-serif; font-weight:normal; font-style:normal;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,7 +37,7 @@ html, body {
   margin-bottom: -$bigFooterHeight;
 
   &:after {
-    content: "";
+    //content: "";
     display: block;
     height: $bigFooterHeight;
   }
@@ -67,6 +68,10 @@ html, body {
 
   @media #{$mobileScreen} {
     padding: $mobHeaderHeight 0 $mobFooterHeight;
+  }
+
+  &.top-less {
+    padding-top: 0;
   }
 }
 
@@ -100,4 +105,39 @@ html, body {
 
 .relative {
   position: relative;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@media #{$wideScreen} {
+  .screenMobile,
+  .screenNormal {
+    display: none !important;
+  }
+}
+
+@media #{$normalScreen} {
+  .screenWide,
+  .screenMobile {
+    display: none !important;
+  }
+}
+
+@media #{$mobileScreen} {
+  .screenWide,
+  .screenNormal {
+    display: none !important;
+  }
 }

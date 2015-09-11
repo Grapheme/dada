@@ -11,7 +11,7 @@
       <div class="page-container js-page-container">
         <header class="header">
           <div class="wrapper"><a href="/" class="header__logo"></a>
-            <nav class="header__menu"><a href="#" class="menu__link"><span>Agency</span></a><a href="contacts.html" class="menu__link"><span>Contacts</span></a><a href="#" data-popup="projects" class="menu__projects js-show-popup"><span>Projects</span></a></nav>
+            <nav class="header__menu"><a href="agency.html" class="menu__link"><span>Agency</span></a><a href="contacts.html" class="menu__link"><span>Contacts</span></a><a href="#" data-popup="projects" class="menu__projects js-show-popup"><span>Projects</span></a></nav>
           </div>
         </header>
         <main class="main">
@@ -162,6 +162,18 @@
       <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&amp;sensor=true"></script>
       <script src="scripts/vendor.js"></script>
       <script src="scripts/main.concat.js"></script>
+      <script>
+        WebFontConfig = { fontdeck: { id: '59727' } };
+        (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+        })();
+      </script>
     </body>
   </head>
 </html>

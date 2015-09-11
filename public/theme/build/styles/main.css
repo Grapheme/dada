@@ -53,7 +53,9 @@
   content: "\e60a"; }
 
 html {
-  font-family: 'Roboto Mono';
+  font-family: "Basis Grotesque Pro Regular", 'Helvetica Neue', Arial, Droid, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -81,7 +83,6 @@ html, body {
   min-height: 100%;
   margin-bottom: -200px; }
   .main:after {
-    content: "";
     display: block;
     height: 200px; }
   @media (max-width: 1650px) {
@@ -103,6 +104,8 @@ html, body {
   @media (max-width: 768px) {
     .in-wrapper {
       padding: 75px 0 50px; } }
+  .in-wrapper.top-less {
+    padding-top: 0; }
 
 .page-container {
   position: absolute;
@@ -129,6 +132,32 @@ html, body {
 
 .relative {
   position: relative; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+@media (min-width: 1650px) {
+  .screenMobile,
+  .screenNormal {
+    display: none !important; } }
+
+@media (max-width: 1650px) {
+  .screenWide,
+  .screenMobile {
+    display: none !important; } }
+
+@media (max-width: 768px) {
+  .screenWide,
+  .screenNormal {
+    display: none !important; } }
 
 .us-link {
   opacity: .54;
@@ -891,4 +920,217 @@ html, body {
     .contacts .contacts__block .block__left .left__content {
       padding-left: 95px; }
   .contacts .contacts__form {
-    padding: 0 95px; } }
+    padding: 0 95px;
+    margin-top: 230px; } }
+
+.about .about-title {
+  font-size: 24px; }
+
+.about .about-text {
+  font-size: 14px;
+  line-height: 1.429; }
+
+.about .about__header {
+  position: relative;
+  height: 685px; }
+  .about .about__header .wrapper {
+    height: 100%; }
+  .about .about__header .header__image {
+    position: absolute;
+    left: 0;
+    right: 46%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-color: #ccc; }
+    .about .about__header .header__image .image__word {
+      position: absolute;
+      display: inline-block;
+      right: -100px;
+      top: 50%;
+      -webkit-transform-origin: 100% 100%;
+          -ms-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      -webkit-transform: rotate(-90deg) translateX(50%);
+          -ms-transform: rotate(-90deg) translateX(50%);
+              transform: rotate(-90deg) translateX(50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; }
+  .about .about__header .header__info {
+    position: relative;
+    float: right;
+    width: 44%;
+    height: 100%; }
+    .about .about__header .header__info .info-cont {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .about .about__header .header__info .info__top {
+      position: relative;
+      text-align: right; }
+      .about .about__header .header__info .info__top .top__image {
+        display: inline-block;
+        vertical-align: top;
+        width: 230px;
+        height: 230px;
+        background-size: cover;
+        background-position: center center;
+        background-color: #ccc; }
+      .about .about__header .header__info .info__top .top__word {
+        position: absolute;
+        display: inline-block;
+        left: 17%;
+        bottom: 0;
+        -webkit-transform-origin: 0 100%;
+            -ms-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        font-family: 'Playfair Display', serif;
+        font-size: 40px; }
+    .about .about__header .header__info .info__text {
+      width: 350px;
+      margin: 60px auto 0; }
+      .about .about__header .header__info .info__text p:last-child {
+        margin-bottom: 0; }
+    .about .about__header .header__info .info__btn {
+      position: absolute;
+      right: 0;
+      bottom: -15px; }
+
+.about .about__clients {
+  position: relative;
+  height: 525px;
+  margin-top: 120px; }
+  .about .about__clients .wrapper {
+    height: 100%; }
+  .about .about__clients .clients__left {
+    padding-top: 110px;
+    width: 50%; }
+    .about .about__clients .clients__left .left__links {
+      margin-top: 70px;
+      padding-left: 20px; }
+      .about .about__clients .clients__left .left__links .links__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 60px 30px 0; }
+        .about .about__clients .clients__left .left__links .links__item:last-child {
+          margin-right: 0; }
+  .about .about__clients .clients__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-color: #ccc; }
+
+.about .about__middle {
+  margin-top: 70px; }
+  .about .about__middle .middle__left {
+    float: left;
+    width: 50%;
+    padding-top: 70px; }
+    .about .about__middle .middle__left .left__block {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      margin: 0 -0.3em 35px 0;
+      box-sizing: border-box;
+      padding-right: 55px; }
+      .about .about__middle .middle__left .left__block .block__desc {
+        margin-top: 10px; }
+  .about .about__middle .middle__founders {
+    float: left;
+    width: 50%;
+    overflow: hidden; }
+    .about .about__middle .middle__founders .founders__list {
+      margin: 20px -20px 0; }
+      .about .about__middle .middle__founders .founders__list .list__item {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 20px; }
+        .about .about__middle .middle__founders .founders__list .list__item .item__image {
+          height: 370px;
+          background-size: cover;
+          background-position: center center;
+          background-color: #ccc; }
+        .about .about__middle .middle__founders .founders__list .list__item .item__name {
+          margin-top: 20px; }
+        .about .about__middle .middle__founders .founders__list .list__item .item__desc {
+          margin-top: 5px; }
+
+.about .about__team {
+  margin-top: 100px; }
+  .about .about__team .team__image {
+    margin-top: 20px;
+    height: 720px;
+    background-size: cover;
+    background-position: center center;
+    background-color: #ccc; }
+
+.about .about__footer {
+  position: relative;
+  text-align: right;
+  padding: 70px 0 70px;
+  margin-right: 130px; }
+  .about .about__footer .footer__nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; }
+    .about .about__footer .footer__nav .nav__link {
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+      font-size: 23px;
+      color: #727373;
+      width: 100px;
+      text-align: center;
+      -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
+      .about .about__footer .footer__nav .nav__link:hover {
+        opacity: .54; }
+
+@media (max-width: 1650px) {
+  .about .about__header {
+    position: relative;
+    height: auto; }
+    .about .about__header .header__image {
+      height: 500px; }
+    .about .about__header .header__info {
+      width: 65%; }
+      .about .about__header .header__info .info-cont {
+        position: relative;
+        margin-top: 500px; }
+      .about .about__header .header__info .info-content {
+        position: relative;
+        width: 500px; }
+      .about .about__header .header__info .info__top {
+        position: absolute;
+        right: 0; }
+        .about .about__header .header__info .info__top .top__image {
+          width: 150px;
+          height: 150px; }
+      .about .about__header .header__info .info__text {
+        padding-top: 50px;
+        margin: 0; }
+  .about .about__clients {
+    height: 450px; }
+    .about .about__clients .clients__left {
+      padding-top: 0; }
+  .about .about__middle .middle__left {
+    width: 65%; }
+  .about .about__middle .middle__founders {
+    float: right;
+    width: 65%;
+    margin-top: 40px; }
+  .about .about__team .team__image {
+    height: 500px; } }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0 30px; } }
