@@ -920,7 +920,7 @@ html, body {
     .contacts .contacts__block .block__left .left__content {
       padding-left: 95px; }
   .contacts .contacts__form {
-    padding: 0 95px;
+    padding: 0 95px 70px;
     margin-top: 230px; } }
 
 .about .about-title {
