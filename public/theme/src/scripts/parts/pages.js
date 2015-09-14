@@ -76,7 +76,7 @@ Pages.prototype = {
             .addClass('js-page-changer page-changer');
         }, 1000);
       }, 1000);
-    }, 800);
+    }, 300);
   },
   init: function() {
     var t = this;

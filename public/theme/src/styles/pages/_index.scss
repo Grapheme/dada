@@ -39,19 +39,49 @@
 
     &.active {
       box-shadow: 19px 33px 70px 6px rgba(50, 50, 50, .3);
+
+      .slide__arrow {
+        opacity: 1;
+      }
     }
 
     &.opened {
       overflow: hidden;
 
       .project-title {
-        transition: all .7s cubic-bezier(0.51,-0.16, 0.91,-0.11);
-        transform: translateX(-200%);
+        transition: all .3s cubic-bezier(0.51,-0.16, 0.91,-0.11);
+        // transform: translateX(-200%);
+        opacity: 0;
       }
 
       .project-desc {
-        transition: all .7s cubic-bezier(0.51,-0.16, 0.91,-0.11) .1s;
-        transform: translateX(-200%);
+        transition: all .3s cubic-bezier(0.51,-0.16, 0.91,-0.11);
+        // transform: translateX(-200%);
+        opacity: 0;
+      }
+    }
+
+    .slide__arrow {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      height: 50px;
+      width: 100px;
+      line-height: 50px;
+      margin-top: -25px;
+      text-align: center;
+      text-decoration: none;
+      color: #4b4b4a;
+      font-size: 25px;
+      opacity: 0;
+      transition: all .5s cubic-bezier(0.51,-0.16, 0.91,-0.11);
+
+      &.arrow-left {
+        left: 0;
+      }
+
+      &.arrow-right {
+        right: 0;
       }
     }
 
