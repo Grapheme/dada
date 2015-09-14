@@ -250,7 +250,9 @@ MainSlider.prototype = {
       if($(this).hasClass('js-slide-right')) {
         var nextIndex = self.activeIndex + 1;
       }
-      self.move.setActive(nextIndex, true);
+      if(nextIndex >= 0 && nextIndex < self.dom.slide.length) {
+        self.move.setActive(nextIndex, true);
+      }
       return false;
     });
     $(window).on('mousemove touchmove', function(e){
