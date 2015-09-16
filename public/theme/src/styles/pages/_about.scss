@@ -120,10 +120,11 @@
           display: inline-block;
           vertical-align: middle;
           margin: 0 60px 30px 0;
+          text-align: center;
 
-          &:last-child {
+          /*&:last-child {
             margin-right: 0;
-          }
+          }*/
         }
       }
     }
@@ -307,7 +308,140 @@
     }
   }
 
+  @media screen and (max-width: 998px) {
+    .about__header .header__info {
+      width: 85%;
+    }
+  }
+
   @media #{$mobileScreen} {
-    padding: 0 30px;
+    .about__header {
+      .header__image {
+        height: 200px;
+        right: 0;
+
+        .image__word {
+          right: auto;
+          left: -60px;
+          top: 263px;
+        }
+      }
+
+      .header__info {
+        float: none;
+        width: auto;
+
+        .info-cont {
+          margin-top: 0;
+          padding: 200px 0 150px;
+        }
+
+        .info-content {
+          width: auto;
+          padding-left: 70px;
+        }
+
+        .info__text {
+          width: auto;
+          padding-top: 30px;
+        }
+
+        .info__btn {
+          display: none;
+        }
+
+        .info__top {
+          position: absolute;
+          bottom: 0;
+
+          .top__image {
+            width: 115px;
+            height: 115px;
+          }
+        }
+      }
+    }
+
+    .about__clients {
+      height: auto;
+      margin-top: 35px;
+
+      .clients__left {
+        width: auto;
+
+        .left__links {
+          padding: 0 10px;
+          margin-top: 40px;
+
+          .links__item {
+            width: 40%;
+            margin-right: 20%;
+
+            &:nth-child(2n) {
+              margin-right: 0;
+            }
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      .clients__right {
+        position: relative;
+        left: 0;
+        height: 180px;
+        margin: 0 -30px;
+      }
+    }
+
+    .about__middle {
+      margin-top: 0;
+
+      .middle__left {
+        padding-top: 30px;
+        width: auto;
+        float: none;
+
+        .left__block {
+          display: block;
+          padding: 0;
+          width: auto;
+        }
+      }
+
+      .middle__founders {
+        float: none;
+        width: auto;
+        margin-top: 60px;
+
+        .founders__list {
+          .list__item {
+            float: none;
+            width: auto;
+            margin-bottom: 40px;
+
+            .item__image {
+              height: 260px;
+            }
+          }
+        }
+      }
+    }
+
+    .about__team {
+      margin-top: 0;
+
+      .team__image {
+        height: 140px;
+        margin: 0 -30px;
+        margin-top: 13px;
+      }
+    }
+
+    .about__footer {
+      display: none;
+    }
   }
 }

@@ -12,8 +12,8 @@ html.no-js(lang="")
     title #{title}
     link(rel="stylesheet", href="styles/vendor.css")
     link(rel="stylesheet", href="styles/main.css")
-    body(class="#{bodyClass}")
-        .page-container.js-page-container
+    body
+        .page-container.js-page-container(class="#{bodyClass}")
             header.header
                 .wrapper
                     a(href="index.html").header__logo
@@ -50,9 +50,12 @@ html.no-js(lang="")
                     .projects-wrapper
                         .projects-inside
                             .projects__top
-                                //- .top__langs
-                                    a(href="#").langs__item Ru
-                                    a(href="#").langs__item.active Eng
+                                .top__menu
+                                    a(href="agency.html").menu__item Agency
+                                    a(href="contacts.html").menu__item Contacts
+                                    a(href="#").menu__item.active Ru
+                                    a.menu__item /
+                                    a(href="#").menu__item.active Eng
                                 a(href="#").top__close.js-close-popup
                                     span.svg-font.icon-close
                             .projects__bottom

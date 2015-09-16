@@ -45,6 +45,8 @@
 }
 .icon-arrow2_right:before {
   content: "\e605";
+  position: relative;
+  top: -.06em;
 }
 .icon-arrow2_top:before {
   content: "\e606";

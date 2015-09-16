@@ -117,7 +117,7 @@
 
   @media #{$mobileScreen} {
     top: $mobHeaderHeight;
-    bottom: $mobFooterHeight;
+    bottom: $mobFooterHeightIndex;
 
     .index__slide {
       .slide__content {
@@ -126,6 +126,10 @@
         width: 100%;
         vertical-align: bottom;
         text-align: center;
+      }
+
+      .slide__arrow {
+        display: none;
       }
     }
   }
@@ -144,4 +148,12 @@
 .index-body .main {
   position: relative;
   overflow: hidden;
+
+  @media #{$mobileScreen} {
+    margin-bottom: -$mobFooterHeightIndex;
+
+    &:after {
+      height: $mobFooterHeightIndex;
+    }
+  }
 }

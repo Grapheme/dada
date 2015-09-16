@@ -2,6 +2,7 @@ $yellow: #f8bb62;
 $wideScreen: screen and (min-width: 1650px);
 $normalScreen: screen and (max-width: 1650px);
 $mobileScreen: screen and (max-width: 768px);
+$onlyNormalScreen: screen and (max-width: 1650px) and (min-width: 768px);
 
 $bigHeaderHeight: 180px;
 $midHeaderHeight: 120px;
@@ -9,4 +10,5 @@ $mobHeaderHeight: 75px;
 
 $bigFooterHeight: 200px;
 $midFooterHeight: 105px;
-$mobFooterHeight: 50px;
+$mobFooterHeight: 415px;
+$mobFooterHeightIndex: 50px;

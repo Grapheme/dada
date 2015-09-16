@@ -3,6 +3,7 @@ var Contacts = function() {
 }
 Contacts.prototype = {
   init: function() {
+    if(!$('#map').length) return;
     function initialize() {
       var mapOptions = {
         center: new google.maps.LatLng(55.757907, 37.611896),

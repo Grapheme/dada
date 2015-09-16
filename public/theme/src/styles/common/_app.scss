@@ -123,21 +123,24 @@ html, body {
 
 @media #{$wideScreen} {
   .screenMobile,
-  .screenNormal {
+  .screenNormal,
+  .notWide {
     display: none !important;
   }
 }
 
-@media #{$normalScreen} {
+@media #{$onlyNormalScreen} {
   .screenWide,
-  .screenMobile {
+  .screenMobile,
+  .notNormal {
     display: none !important;
   }
 }
 
 @media #{$mobileScreen} {
   .screenWide,
-  .screenNormal {
+  .screenNormal,
+  .notMobile {
     display: none !important;
   }
 }

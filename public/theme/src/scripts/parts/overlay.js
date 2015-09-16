@@ -3,7 +3,7 @@ var Overlay = function() {
 }
 Overlay.prototype = {
   settings: {
-    transitionDuration: 700
+    transitionDuration: 300
   },
   dom: {
     overlay: $('.js-overlay'),

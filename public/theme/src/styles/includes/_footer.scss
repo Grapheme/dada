@@ -73,12 +73,26 @@
       height: $mobFooterHeight;
     }
 
-    .footer__copy, .footer__blocks {
-      bottom: 10px;
-    }
-
     .footer__copy {
       font-size: 10px;
+    }
+
+    .footer__blocks {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      padding-top: 50px;
+
+      .blocks__item {
+        display: block;
+        margin: 30px 0 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
     }
   }
 }
@@ -87,6 +101,20 @@
   @media #{$normalScreen} {
     .footer__blocks {
       display: none;
+    }
+  }
+
+  @media #{$mobileScreen} {
+    .footer {
+      height: $mobFooterHeightIndex;
+
+      .relative {
+        height: $mobFooterHeightIndex;
+      }
+
+      .footer__copy {
+        bottom: 10px;
+      }
     }
   }
 }

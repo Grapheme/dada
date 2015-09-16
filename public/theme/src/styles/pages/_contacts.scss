@@ -13,8 +13,11 @@
         display: inline-block;
         vertical-align: middle;
         line-height: normal;
-        width: 380px;
+        width: 100%;
+        max-width: 570px;
         padding-left: 140px;
+        padding-right: 50px;
+        box-sizing: border-box;
 
         .content__title {
           font-family: 'Playfair Display', serif;
@@ -142,6 +145,7 @@
 
       .block__left {
         .left__content {
+          max-width: 525px;
           padding-left: 95px;
         }
       }
@@ -150,6 +154,81 @@
     .contacts__form {
       padding: 0 95px 70px;
       margin-top: 230px;
+    }
+  }
+
+  @media #{$mobileScreen} {
+    .contacts__block {
+      height: auto;
+      line-height: normal;
+
+      .block__left, .block__right {
+        float: none;
+        width: auto;
+      }
+
+      .block__left {
+        height: auto;
+        text-align: center;
+
+        .left__content {
+          padding: 15px 10px 30px;
+          line-height: 1.429;
+
+          .content__title {
+            font-size: 34px;
+          }
+        }
+      }
+
+      .block__right {
+        height: 165px;
+      }
+    }
+
+    .contacts__form {
+      margin-top: 70px;
+      padding: 0;
+
+      .form__title {
+        font-size: 38px;
+      }
+
+      .form__lines {
+        margin-top: 30px;
+
+        .lines__item {
+          margin: 0;
+
+          .item__input {
+            &.input-half {
+              float: none;
+              width: auto;
+              margin: 0 !important;
+            }
+
+            .input__placeholder {
+              font-size: 24px;
+              height: 38px;
+              line-height: 38px;
+            }
+
+            input {
+              font-size: 24px;
+            }
+          }
+        }
+
+        .lines__btn {
+          text-align: center;
+
+          .us-btn {
+            width: 100%;
+            box-sizing: border-box;
+            height: 42px;
+          }
+        }
+      }
     }
   }
 }

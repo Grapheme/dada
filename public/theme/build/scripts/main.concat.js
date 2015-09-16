@@ -44,6 +44,7 @@ var Contacts = function() {
 }
 Contacts.prototype = {
   init: function() {
+    if(!$('#map').length) return;
     function initialize() {
       var mapOptions = {
         center: new google.maps.LatLng(55.757907, 37.611896),
@@ -124,11 +125,13 @@ MainSlider.prototype = {
           thisParent.dom.parent.addClass('shift');
         }
       },
-      fixed: function() {
+      fixed: function(sactive) {
         var thisParent = MainSlider.prototype;
         thisParent.move.status = false;
         thisParent.dom.parent.removeClass('shift');
-        thisParent.move.setActive(thisParent.nextActive, true);
+        if(!sactive) {
+          thisParent.move.setActive(thisParent.nextActive, true);
+        }
       }
     },
     setCss: function(elem, type, obj) {
@@ -138,6 +141,7 @@ MainSlider.prototype = {
       });
     },
     setActive: function(eq, animated) {
+      if(eq === false) return;
       var self = this;
       var thisParent = MainSlider.prototype;
       var thisFrame = thisParent.dom.slide.eq(eq);
@@ -261,6 +265,8 @@ MainSlider.prototype = {
     $(window).on('mouseup touchend', function(e){
       if($(e.target).hasClass('js-slide-link')) {
         self.move.setStatus.fixed();
+      } else {
+        self.move.setStatus.fixed(true);
       }
     });
     self.dom.slide.first().find('.js-slide-left').hide();
@@ -273,7 +279,7 @@ var Overlay = function() {
 }
 Overlay.prototype = {
   settings: {
-    transitionDuration: 700
+    transitionDuration: 300
   },
   dom: {
     overlay: $('.js-overlay'),

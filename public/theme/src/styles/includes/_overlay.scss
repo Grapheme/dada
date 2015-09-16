@@ -9,7 +9,7 @@
 
   &.active {
     .overlay__background {
-      background: rgba(0, 0, 0, .2);
+      background: #c5c6c7;
     }
   }
 
@@ -20,8 +20,8 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0);
-    transition: background .7s ease;
+    background: transparent;
+    transition: background .3s ease;
   }
 
   .overlays {
@@ -32,11 +32,13 @@
     display: none;
     position: relative;
     z-index: 2;
-    transform: translateY(-125%);
-    transition: all .7s ease;
+    transform: scale(.9);
+    opacity: 0;
+    transition: all .3s ease;
 
     &.active {
-      transform: translateY(0);
+      transform: scale(1);
+      opacity: 1;
     }
 
     &.block-projects {
@@ -63,11 +65,34 @@
         position: absolute;
         top: 45px;
         right: 52px;
+        left: 30px;
         line-height: 32px;
-        text-align: right;
+        text-align: left;
         font-size: 0;
 
+        .top__menu {
+          display: none;
+          vertical-align: middle;
+          font-size: 14px;
+
+          .menu__item {
+            color: #000;
+            margin: 0 7.5px;
+            text-decoration: none;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &.active {
+              color: $yellow;
+            }
+          }
+        }
+
         .top__close {
+          position: absolute;
+          right: 0;
           display: inline-block;
           vertical-align: middle;
           width: 32px;
@@ -285,6 +310,67 @@
           .bottom__left {
             .left__contact {
               bottom: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$mobileScreen} {
+    .overlay__block.block-projects {
+      padding: 0;
+
+      .projects-wrapper {
+        .projects-inside {
+          top: 0;
+          bottom: 0;
+          padding-left: 30px;
+          overflow: auto;
+        }
+
+        .projects__top {
+          .top__menu {
+            display: inline-block;
+          }
+        }
+
+        .projects__bottom {
+          .bottom__left {
+            float: none;
+            width: auto;
+            height: auto;
+
+            .left__title {
+              font-size: 26px;
+            }
+
+            .left__contact {
+              display: none;
+            }
+          }
+
+          .bottom__right {
+            float: none;
+            width: auto;
+            height: auto;
+            margin-top: 25px;
+
+            .mCustomScrollBox {
+              padding-right: 15px;
+              margin-left: -15px;
+            }
+
+            .block__upload {
+              display: none;
+            }
+
+            .right__block {
+              width: 50%;
+
+              &.block-right {
+                display: none;
+              }
             }
           }
         }
