@@ -7,6 +7,17 @@ block vars
 block content
   .project.in-wrapper.top-less
     .project__header.white-font(style="background-image: url(http://placehold.it/1920x1080);")
+      .header__nav
+        .wrapper
+          .nav-container
+            a(href="#").nav__arrow.arrow-left
+              span.svg-font.icon-arrow2_left
+            a(href="#").nav__arrow.arrow-right
+              span.svg-font.icon-arrow2_right
+            a(href="#").nav__scroll.js-project-scroll
+              span Scroll down
+              br
+              span.svg-font.icon-arrow2_bottom
       .header__content
         .wrapper
           .content-wrap

@@ -17,7 +17,59 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: 55%;
+      top: 44.5%;
+    }
+
+    .header__nav {
+      position: relative;
+      height: 100vh;
+
+      .wrapper {
+        position: relative;
+        height: 100%;
+
+        .nav-container {
+          position: relative;
+          height: 100%;
+        }
+      }
+
+      .nav__arrow {
+        position: absolute;
+        z-index: 99;
+        height: 60px;
+        line-height: 60px;
+        top: 50%;
+        font-size: 50px;
+        text-decoration: none;
+        color: #6b6c6a;
+
+        &.arrow-left {
+          left: 0;
+          margin-left: -15px;
+        }
+
+        &.arrow-right {
+          right: 0;
+          margin-right: -15px;
+        }
+      }
+
+      .nav__scroll {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        color: #000;
+
+        .svg-font {
+          font-size: 22px;
+          color: #6b6c6a;
+        }
+      }
     }
 
     &.white-font {

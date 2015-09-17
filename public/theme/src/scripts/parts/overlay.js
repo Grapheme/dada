@@ -45,8 +45,8 @@ Overlay.prototype = {
     $('.js-popup').on('click', function(e){
       if($(e.target).hasClass('js-popup')) {
         t.close($(this).attr('data-name'));
+        return false;
       }
-      return false;
     });
   }
 }

@@ -82,6 +82,16 @@ html, body {
   right: 0;
   height: 100%;
   z-index: 2;
+  opacity: 1;
+  transition: all .5s ease;
+
+  &.in-front {
+    z-index: 3;
+  }
+
+  &.faded {
+    opacity: 0;
+  }
 }
 
 .page-changer {
@@ -92,7 +102,7 @@ html, body {
   height: 100%;
   z-index: 1;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: all .5s ease;
 
   &.in-front {
     z-index: 3;

@@ -16,11 +16,11 @@ html.no-js(lang="")
         .page-container.js-page-container(class="#{bodyClass}")
             header.header
                 .wrapper
-                    a(href="index.html").header__logo
+                    a(href="index.html").header__logo.js-go-link
                     nav.header__menu
-                        a(href="agency.html").menu__link
+                        a(href="agency.html").menu__link.js-go-link
                             span Agency
-                        a(href="contacts.html").menu__link
+                        a(href="contacts.html").menu__link.js-go-link
                             span Contacts
                         a(href="#" data-popup="projects").menu__projects.js-show-popup
                             span Projects
@@ -53,7 +53,7 @@ html.no-js(lang="")
                                 .top__menu
                                     a(href="agency.html").menu__item Agency
                                     a(href="contacts.html").menu__item Contacts
-                                    a(href="#").menu__item.active Ru
+                                    a(href="#").menu__item Ru
                                     a.menu__item /
                                     a(href="#").menu__item.active Eng
                                 a(href="#").top__close.js-close-popup
@@ -73,9 +73,12 @@ html.no-js(lang="")
                                         each i in [1,2,3]
                                             .block__item
                                                 .item__image
-                                                    img(src="https://placeimg.com/285/285/any")
-                                                .item__tag Digital
-                                                .item__name Yandex
+                                                    a(href="project.html").js-go-link.js-go-popup
+                                                        img(src="https://placeimg.com/285/285/any")
+                                                .item__tag
+                                                    a(href="project.html").js-go-link.js-go-popup Digital
+                                                .item__name
+                                                    a(href="project.html").js-go-link.js-go-popup Yandex
                                     .right__block.block-center
                                         .block__upload
                                             a(href="#").upload__link
@@ -84,16 +87,22 @@ html.no-js(lang="")
                                         each i in [1,2,3]
                                             .block__item
                                                 .item__image
-                                                    img(src="https://placeimg.com/285/285/any")
-                                                .item__tag Digital
-                                                .item__name Yandex
+                                                    a(href="project.html").js-go-link.js-go-popup
+                                                        img(src="https://placeimg.com/285/285/any")
+                                                .item__tag
+                                                    a(href="project.html").js-go-link.js-go-popup Digital
+                                                .item__name
+                                                    a(href="project.html").js-go-link.js-go-popup Yandex
                                     .right__block.block-right
                                         each i in [1,2,3]
                                             .block__item
                                                 .item__image
-                                                    img(src="https://placeimg.com/285/285/any")
-                                                .item__tag Digital
-                                                .item__name Yandex
+                                                    a(href="project.html").js-go-link.js-go-popup
+                                                        img(src="https://placeimg.com/285/285/any")
+                                                .item__tag
+                                                    a(href="project.html").js-go-link.js-go-popup Digital
+                                                .item__name
+                                                    a(href="project.html").js-go-link.js-go-popup Yandex
         script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q5VgK-858jgeSbJKHbclop_XIJs3lXs&sensor=true")
         script(src="scripts/vendor.js")
         script(src="scripts/main.concat.js")

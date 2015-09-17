@@ -48,7 +48,8 @@ MainSlider.prototype = {
         var thisParent = MainSlider.prototype;
         thisParent.move.status = false;
         thisParent.dom.parent.removeClass('shift');
-        if(!sactive) {
+        if(!sactive && thisParent.dom.parent.hasClass('no-link')) {
+          console.log('fixed');
           thisParent.move.setActive(thisParent.nextActive, true);
         }
       }
@@ -60,7 +61,6 @@ MainSlider.prototype = {
       });
     },
     setActive: function(eq, animated) {
-      if(eq === false) return;
       var self = this;
       var thisParent = MainSlider.prototype;
       var thisFrame = thisParent.dom.slide.eq(eq);
