@@ -473,7 +473,7 @@ Pages.prototype = {
     });
     window.onpopstate = function(e){
       // console.log(e);
-      window.location.href = window.location.href;
+      // window.location.href = window.location.href;
       // console.log(window.location.href);
       // t.goNormal(window.location.href);
     };
