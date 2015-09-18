@@ -118,7 +118,8 @@
             font-size: 30px;
             font-family: 'Roboto Mono';
             color: rgb(65, 63, 68);
-
+            padding: 0;
+            border-radius:0;
 
             &:focus {
               border-bottom: 3px solid $yellow;

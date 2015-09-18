@@ -109,6 +109,9 @@ html, body {
   .in-wrapper.top-less {
     padding-top: 0; }
 
+.inner-container {
+  height: 100%; }
+
 .page-container {
   position: absolute;
   top: 0;
@@ -457,7 +460,9 @@ html, body {
         text-align: left;
         font-size: 0; }
         .overlay .overlay__block.block-projects .projects__top .top__menu {
-          display: none;
+          position: absolute;
+          right: 110px;
+          top: -3px;
           vertical-align: middle;
           font-size: 14px; }
           .overlay .overlay__block.block-projects .projects__top .top__menu .menu__item {
@@ -467,6 +472,11 @@ html, body {
             .overlay .overlay__block.block-projects .projects__top .top__menu .menu__item:first-child {
               margin-left: 0; }
             .overlay .overlay__block.block-projects .projects__top .top__menu .menu__item.active {
+              color: #f8bb62; }
+          .overlay .overlay__block.block-projects .projects__top .top__menu a.menu__item {
+            -webkit-transition: color 0.3s ease;
+                    transition: color 0.3s ease; }
+            .overlay .overlay__block.block-projects .projects__top .top__menu a.menu__item:hover {
               color: #f8bb62; }
         .overlay .overlay__block.block-projects .projects__top .top__close {
           position: absolute;
@@ -612,9 +622,21 @@ html, body {
         top: 0;
         bottom: 0;
         padding-left: 30px;
+        padding-top: 90px;
         overflow: auto; }
-      .overlay .overlay__block.block-projects .projects-wrapper .projects__top .top__menu {
-        display: inline-block; }
+      .overlay .overlay__block.block-projects .projects-wrapper .projects__top {
+        position: fixed;
+        padding: 25px 32px 25px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        left: 0;
+        background: #f8fafb; }
+        .overlay .overlay__block.block-projects .projects-wrapper .projects__top .top__menu {
+          position: static;
+          display: inline-block; }
+        .overlay .overlay__block.block-projects .projects-wrapper .projects__top .top__close {
+          right: 23px; }
       .overlay .overlay__block.block-projects .projects-wrapper .projects__bottom .bottom__left {
         float: none;
         width: auto;
@@ -1133,7 +1155,9 @@ html, body {
           height: 40px;
           font-size: 30px;
           font-family: 'Roboto Mono';
-          color: #413f44; }
+          color: #413f44;
+          padding: 0;
+          border-radius: 0; }
           .contacts .contacts__form .form__lines .lines__item .item__input input:focus {
             border-bottom: 3px solid #f8bb62; }
     .contacts .contacts__form .form__lines .lines__btn {

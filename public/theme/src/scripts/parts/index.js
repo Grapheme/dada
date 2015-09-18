@@ -49,7 +49,6 @@ MainSlider.prototype = {
         thisParent.move.status = false;
         thisParent.dom.parent.removeClass('shift');
         if(!sactive && thisParent.dom.parent.hasClass('no-link')) {
-          console.log('fixed');
           thisParent.move.setActive(thisParent.nextActive, true);
         }
       }
@@ -186,6 +185,26 @@ MainSlider.prototype = {
         self.move.setStatus.fixed();
       } else {
         self.move.setStatus.fixed(true);
+      }
+    });
+    var mouseAllow = true;
+    self.dom.parent.on('mousewheel', function(event) {
+      event.preventDefault();
+      if(!mouseAllow) return;
+      var nextIndex = false;
+      var cof = 10;
+      if(event.deltaX > cof || event.deltaY < -cof) {
+        var nextIndex = self.activeIndex + 1;
+      } else
+      if(event.deltaX < -cof || event.deltaY > cof) {
+        var nextIndex = self.activeIndex - 1;
+      }
+      if(nextIndex !== false && nextIndex < self.dom.slide.length && nextIndex >= 0) {
+        self.move.setActive(nextIndex, true);
+        mouseAllow = false;
+        setTimeout(function(){
+          mouseAllow = true;
+        }, 1000);
       }
     });
     self.dom.slide.first().find('.js-slide-left').hide();

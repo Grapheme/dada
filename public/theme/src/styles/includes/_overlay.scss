@@ -71,7 +71,9 @@
         font-size: 0;
 
         .top__menu {
-          display: none;
+          position: absolute;
+          right: 110px;
+          top: -3px;
           vertical-align: middle;
           font-size: 14px;
 
@@ -85,6 +87,14 @@
             }
 
             &.active {
+              color: $yellow;
+            }
+          }
+
+          a.menu__item {
+            transition: color .3s ease;
+
+            &:hover {
               color: $yellow;
             }
           }
@@ -336,12 +346,26 @@
           top: 0;
           bottom: 0;
           padding-left: 30px;
+          padding-top: 90px;
           overflow: auto;
         }
 
         .projects__top {
+          position: fixed;
+          padding: 25px 32px 25px;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          left: 0;
+          background: #f8fafb;
+
           .top__menu {
+            position: static;
             display: inline-block;
+          }
+
+          .top__close {
+            right: 23px;
           }
         }
 
