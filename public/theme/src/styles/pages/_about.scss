@@ -317,13 +317,13 @@
   @media #{$mobileScreen} {
     .about__header {
       .header__image {
-        height: 200px;
+        height: 250px;
         right: 0;
 
         .image__word {
           right: auto;
           left: -60px;
-          top: 263px;
+          top: 313px;
         }
       }
 
@@ -333,7 +333,7 @@
 
         .info-cont {
           margin-top: 0;
-          padding: 200px 0 150px;
+          padding: 250px 0 150px;
         }
 
         .info-content {
@@ -434,7 +434,7 @@
       margin-top: 0;
 
       .team__image {
-        height: 140px;
+        height: 250px;
         margin: 0 -30px;
         margin-top: 13px;
       }

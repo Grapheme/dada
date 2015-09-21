@@ -1445,18 +1445,18 @@ html, body {
 
 @media (max-width: 768px) {
   .about .about__header .header__image {
-    height: 200px;
+    height: 250px;
     right: 0; }
     .about .about__header .header__image .image__word {
       right: auto;
       left: -60px;
-      top: 263px; }
+      top: 313px; }
   .about .about__header .header__info {
     float: none;
     width: auto; }
     .about .about__header .header__info .info-cont {
       margin-top: 0;
-      padding: 200px 0 150px; }
+      padding: 250px 0 150px; }
     .about .about__header .header__info .info-content {
       width: auto;
       padding-left: 70px; }
@@ -1514,7 +1514,7 @@ html, body {
   .about .about__team {
     margin-top: 0; }
     .about .about__team .team__image {
-      height: 140px;
+      height: 250px;
       margin: 0 -30px;
       margin-top: 13px; }
   .about .about__footer {
