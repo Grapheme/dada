@@ -14,6 +14,7 @@ Contacts.prototype = {
       var myLatlng = new google.maps.LatLng(47.2248231, 39.7273844);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+    initialize();
   }
 }
 var Input = function() {

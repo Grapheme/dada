@@ -63,16 +63,16 @@ html.no-js(lang="")
                             .projects__bottom
                                 .bottom__left
                                     .left__title Projects
-                                    .left__nav
-                                        a(href="#").nav__link.us-link.active All
-                                        a(href="#").nav__link.us-link Digital
-                                        a(href="#").nav__link.us-link Branding
+                                    .left__nav.js-types
+                                        //- a(href="#").nav__link.us-link.active All
+                                        //- a(href="#").nav__link.us-link Digital
+                                        //- a(href="#").nav__link.us-link Branding
                                     .left__contact
                                         a(href="#").us-btn
                                             span Contact Us
                                 .bottom__right.js-customScroll
-                                    .right__block.block-left
-                                        each i in [1,2,3]
+                                    .right__block.block-left.js-project-block(data-position="left")
+                                        //- each i in [1,2,3]
                                             .block__item
                                                 .item__image
                                                     a(href="project.html").js-go-link.js-go-popup
@@ -86,17 +86,18 @@ html.no-js(lang="")
                                             a(href="#").upload__link
                                                 span.svg-font.icon-download
                                                 span.link__text Download<br>Portfolio
-                                        each i in [1,2,3]
-                                            .block__item
-                                                .item__image
-                                                    a(href="project.html").js-go-link.js-go-popup
-                                                        img(src="https://placeimg.com/285/285/any")
-                                                .item__tag
-                                                    a(href="project.html").js-go-link.js-go-popup Digital
-                                                .item__name
-                                                    a(href="project.html").js-go-link.js-go-popup Yandex
-                                    .right__block.block-right
-                                        each i in [1,2,3]
+                                        .js-project-block(data-position="center")
+                                            //- each i in [1,2,3]
+                                                .block__item
+                                                    .item__image
+                                                        a(href="project.html").js-go-link.js-go-popup
+                                                            img(src="https://placeimg.com/285/285/any")
+                                                    .item__tag
+                                                        a(href="project.html").js-go-link.js-go-popup Digital
+                                                    .item__name
+                                                        a(href="project.html").js-go-link.js-go-popup Yandex
+                                    .right__block.block-right.js-project-block(data-position="right")
+                                        //- each i in [1,2,3]
                                             .block__item
                                                 .item__image
                                                     a(href="project.html").js-go-link.js-go-popup
@@ -120,3 +121,57 @@ html.no-js(lang="")
               s.parentNode.insertBefore(wf, s);
             })();
         block scripts
+        script.
+            Dictionary = window.Dictionary || {};
+            Dictionary.types = {"1":"Digital","2":"Branding","0":"All"};
+            Dictionary.projects =   {
+                                        "4": {
+                                            "name": "Яндекс.Музыка 1",
+                                            "type_id": "1",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "5": {
+                                            "name": "Яндекс.Музыка 2",
+                                            "type_id": "1",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "6": {
+                                            "name": "Яндекс.Музыка 3",
+                                            "type_id": "1",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "7": {
+                                            "name": "Яндекс.Музыка 4",
+                                            "type_id": "1",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "8": {
+                                            "name": "Яндекс.Музыка 5",
+                                            "type_id": "1",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "9": {
+                                            "name": "Яндекс.Музыка 6",
+                                            "type_id": "2",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "10": {
+                                            "name": "Яндекс.Музыка 7",
+                                            "type_id": "2",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        },
+                                        "11": {
+                                            "name": "Яндекс.Музыка 8",
+                                            "type_id": "2",
+                                            "url": "project.html",
+                                            "image": "https://placeimg.com/285/285/any"
+                                        }
+                                    };
+

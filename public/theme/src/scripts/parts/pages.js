@@ -7,6 +7,7 @@ Pages.prototype = {
     $.get(href)
       .done(function(responce){
         var data = {};
+        var images = [];
         $.each($(responce), function(i, v){
           if($(v).is('title')) {
             data.title = $(v).text();
@@ -16,6 +17,11 @@ Pages.prototype = {
             data.page = v;
             return;
           };
+          if($(v).is('img')) {
+            images.push($(v).attr('src'));
+            $('html').prepend('<img src="' + $(v).attr('src') + '">');
+            return;
+          }
         });
         callback(data);
       })

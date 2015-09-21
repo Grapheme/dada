@@ -188,7 +188,7 @@ MainSlider.prototype = {
       }
     });
     var mouseAllow = true;
-    self.dom.parent.on('mousewheel', function(event) {
+    $(document).on('mousewheel', '.js-main-slider', function(event) {
       event.preventDefault();
       if(!mouseAllow) return;
       var nextIndex = false;
@@ -210,5 +210,6 @@ MainSlider.prototype = {
     self.dom.slide.first().find('.js-slide-left').hide();
     self.dom.slide.last().find('.js-slide-right').hide();
     self.move.setActive(0);
+    self.dom.parent.addClass('active');
   }
 }

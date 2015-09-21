@@ -669,7 +669,12 @@ html, body {
   top: 180px;
   left: 0;
   right: 0;
-  bottom: 200px; }
+  bottom: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease;
+          transition: opacity 0.1s ease; }
+  .index.active {
+    opacity: 1; }
   .index .wrapper {
     height: 100%; }
   .index .index-wrap {
